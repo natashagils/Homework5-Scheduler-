@@ -6,6 +6,7 @@ $(document).ready(function(){
   var curDate = moment().format('MMMM Do YYYY');
   currentDateEl.text(curDate);
 });
+
 // function to save input from text area 
 $(".saveBtn").click(function(){
   // var to target the text area for each specific time block
@@ -13,6 +14,7 @@ $(".saveBtn").click(function(){
   // code to save the text area items in local storage 
   localStorage.setItem($(this).attr("id"),textValue);
 });
+
 // function to color code each time block 
 $(document).ready(function(){
   var currentTime= moment().hours();
