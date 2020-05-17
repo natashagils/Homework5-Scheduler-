@@ -12,38 +12,49 @@ SO THAT I can manage my time effectively
 
 
 # Screenshot 
-<img width="769" alt="Screen Shot 2020-02-11 at 8 44 16 AM" src="https://user-images.githubusercontent.com/56641651/74241794-ba2ec500-4caa-11ea-9221-ee0a7684e86b.png">
+<img width="799" alt="Screen Shot 2020-05-17 at 1 06 53 PM" src="https://user-images.githubusercontent.com/56641651/82154955-5edb1880-983f-11ea-85a0-02b7552b7103.png">
 
 # Acceptance Criteria 
-The password generator fulfills the below acceptance criteria: 
+The project fulfills the below acceptance criteria: 
 
-* A button initiates the password generation process
-* A series of prompts asks a user for password criteria
-* User is able to select which criteria to include in the password
-* Length of the generated password is between 8 - 128 characters
-* User is able to choose lowercase, uppercase, numeric, and/or special characters with each prompt 
-* All user input is validated
-* The resultant password mataches the user criteria 
-* The resultant password is written to the page 
+* GIVEN I am using a daily planner to create a schedule
+* WHEN I open the planner
+* THEN the current day is displayed at the top of the calendar
+* WHEN I scroll down
+* THEN I am presented with timeblocks for standard business hours
+* WHEN I view the timeblocks for that day
+* THEN each timeblock is color coded to indicate whether it is in the past, present, or future
+* WHEN I click into a timeblock
+* THEN I can enter an event
+* WHEN I click the save button for that timeblock
+* THEN the text for that event is saved in local storage
+* WHEN I refresh the page
+* THEN the saved events persist
 
 # Sample Code
 
+```
+$(document).ready(function(){
+  // create a var to call the id 
+  var currentDateEl = $("#currentDay");
+  // create a var to detect the current date
+  var curDate = moment().format('MMMM Do YYYY');
+  currentDateEl.text(curDate);
+});
+// function to save input from text area 
+$(".saveBtn").click(function(){
+  // var to target the text area for each specific time block
+  var textValue=$(this.parentNode.children[1]).val();
+  // code to save the text area items in local storage 
+  localStorage.setItem($(this).attr("id"),textValue);
+});
 
-    getLowerCases: function() {
-      return String.fromCharCode(Math.floor(Math.random() * 26 + 97));
-    },
+```
 
-    getUpperCases: function() {
-      return String.fromCharCode(Math.floor(Math.random() * 26 + 65));
-    },
 
-    getSpecialCharacters: function() {
-      return specialCharacters[Math.floor(Math.random() * specialCharacters.length)]
- 
-  
   
  # Installation
-To use this portfolio, log into your GitHub account (if you don’t have a GitHub user profile, create one at https://github.com/join) and open this link in your browser: https://github.com/natashagils/PasswordGenerator. Then click on the "Fork" button at the top right corner and wait until the repo is forked. 
+To use this portfolio, log into your GitHub account (if you don’t have a GitHub user profile, create one at https://github.com/join) and open this link in your browser: https://github.com/natashagils/Homework5-Scheduler. Then click on the "Fork" button at the top right corner and wait until the repo is forked. 
 
 
 
