@@ -1,5 +1,5 @@
 
-# Work Day Schedular 
+# Work Day Scheduler 
 
 # Synopsis
 This is a simple calendar application that allows the user to save events for hours 9 - 6 pm of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
